@@ -12,7 +12,7 @@ ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 brew update
 brew upgrade
 
-brew install git vim
+brew install coreutils git vim
 
 #homebrew-cask
 brew tap homebrew/versions
