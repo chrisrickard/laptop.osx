@@ -49,3 +49,7 @@ brew cask alfred link
 
 #link sublime  for global 'sublime' command
 ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /usr/local/bin/sublime
+
+#capistrano
+gem sources -a http://gems.github.com/
+sudo gem install capistrano

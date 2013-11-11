@@ -5,6 +5,7 @@ my slightly scripted osx laptop setup.
 
 Note - specific to moi.. fork & edit unles you want to be me.
 
+ - Install xcode and command line tools (scripted https://gist.github.com/uchida/3559987)
  - Run 'setup'
  - Run 'install'
 
