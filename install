@@ -1,0 +1,51 @@
+#!/bin/bash
+
+sudo -v # ask for password only at the beginning
+
+
+
+#install homebrew
+ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+
+
+
+brew update
+brew upgrade
+
+brew install git vim
+
+#homebrew-cask
+brew tap homebrew/versions
+brew tap phinze/homebrew-cask
+
+brew cask install dropbox
+brew cask install google-chrome
+brew cask install firefox
+brew cask install iterm2
+brew cask install sublime-text
+brew cask install flash
+brew cask install silverlight
+brew cask install node
+brew cask install virtualbox
+brew cask install vagrant
+brew cask install disk-inventory-x
+brew cask install alfred
+brew cask install sequel-pro
+brew cask install testflight
+brew cask install toggldesktop
+brew cask install divvy
+brew cask install airfoil
+brew cask install f-lux
+brew cask install adium
+brew cask install Skype
+brew cask install vlc
+brew cask install spotify
+brew cask install utorrent
+brew cask install witch
+
+
+#allow brew cask apps in alfred
+brew cask alfred link
+
+#link sublime  for global 'sublime' command
+ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /usr/local/bin/sublime
