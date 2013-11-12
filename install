@@ -52,4 +52,6 @@ ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /usr/lo
 
 #capistrano
 gem sources -a http://gems.github.com/
-sudo gem install capistrano
+
+#note - sticking to capistrano v2 for now...
+sudo gem install capistrano -v "=2.15.5"
