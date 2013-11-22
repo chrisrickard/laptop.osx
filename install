@@ -8,50 +8,58 @@ sudo -v # ask for password only at the beginning
 ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 
 
-
+#configure homebrew
 brew update
 brew upgrade
-
-brew install coreutils git vim
-
-#homebrew-cask
 brew tap homebrew/versions
 brew tap phinze/homebrew-cask
 
-brew cask install dropbox
-brew cask install google-chrome
-brew cask install firefox
-brew cask install iterm2
-brew cask install sublime-text
-brew cask install flash
-brew cask install silverlight
-brew cask install node
-brew cask install virtualbox
-brew cask install vagrant
-brew cask install disk-inventory-x
+
+#install cli apps
+brew install coreutils git vim
+
+#install gui apps (with cask)
+brew cask install adium
+brew cask install airfoil
 brew cask install alfred
+brew cask install disk-inventory-x
+brew cask install divvy
+brew cask install dropbox
+brew cask install f-lux
+brew cask install firefox
+brew cask install flash
+brew cask install gas-mask
+brew cask install google-chrome
+brew cask install google-drive
+brew cask install hipchat
+brew cask install iterm2
+brew cask install node
 brew cask install sequel-pro
+brew cask install silverlight
+brew cask install Skype
+brew cask install spotify
+brew cask install sublime-text
 brew cask install testflight
 brew cask install toggldesktop
-brew cask install divvy
-brew cask install airfoil
-brew cask install f-lux
-brew cask install adium
-brew cask install Skype
-brew cask install vlc
-brew cask install spotify
 brew cask install utorrent
+brew cask install the-unarchiver
+brew cask install vagrant
+brew cask install virtualbox
+brew cask install vlc
 brew cask install witch
 
 
-#allow brew cask apps in alfred
+#allow brew cask apps to be found via alfred
 brew cask alfred link
 
-#link sublime  for global 'sublime' command
+#link sublime for global 'sublime' command
 ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /usr/local/bin/sublime
 
-#capistrano
+#install capistrano
 gem sources -a http://gems.github.com/
 
 #note - sticking to capistrano v2 for now...
 sudo gem install capistrano -v "=2.15.5"
+
+#install vagrant-cachier (to speed up provisioning)
+vagrant plugin install vagrant-cachier
