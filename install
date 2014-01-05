@@ -16,7 +16,7 @@ brew tap phinze/homebrew-cask
 
 
 #install cli apps
-brew install coreutils git vim
+brew install coreutils git vim mackup
 
 #install gui apps (with cask)
 brew cask install adium
