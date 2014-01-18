@@ -3,7 +3,6 @@
 sudo -v # ask for password only at the beginning
 
 
-
 #install homebrew
 ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 
@@ -47,6 +46,18 @@ brew cask install vagrant
 brew cask install virtualbox
 brew cask install vlc
 brew cask install witch
+
+
+#custom quicklooks
+brew cask install qlcolorcode
+brew cask install qlstephen
+brew cask install qlmarkdown
+brew cask install quicklook-json
+brew cask install qlprettypatch
+brew cask install quicklook-csv
+brew cask install betterzipql
+brew cask install webp-quicklook
+brew cask install suspicious-package
 
 
 #allow brew cask apps to be found via alfred
