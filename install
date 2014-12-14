@@ -5,7 +5,7 @@ sudo -v # ask for password only at the beginning
 
 #install
 echo "installing homebrew..."
-ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 
 #configure homebrew
