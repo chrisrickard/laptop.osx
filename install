@@ -22,53 +22,63 @@ brew install mackup
 brew install fish
 
 #install gui apps (with cask)
-brew cask install adium
-brew cask install airfoil
-brew cask install alfred
-brew cask install disk-inventory-x
-brew cask install divvy
-brew cask install dropbox
-brew cask install f-lux
-brew cask install firefox
-brew cask install flash
-brew cask install gas-mask
-brew cask install google-chrome
-brew cask install google-drive
-brew cask install hipchat
-brew cask install iterm2
-brew cask install node
-brew cask install sequel-pro
-brew cask install silverlight
-brew cask install Skype
-brew cask install spotify
-brew cask install sublime-text
-brew cask install testflight
-brew cask install toggldesktop
-brew cask install utorrent
-brew cask install the-unarchiver
-brew cask install vagrant
-brew cask install virtualbox
-brew cask install vlc
-brew cask install witch
+brew cask install --appdir="/Applications" airfoil
+brew cask install --appdir="/Applications" bartender
+brew cask install --appdir="/Applications" calibre
+#brew cask install --appdir="/Applications" cdock
+brew cask install --appdir="/Applications" cord
+brew cask install --appdir="/Applications" cyberduck
+brew cask install --appdir="/Applications" disk-inventory-x
+brew cask install --appdir="/Applications" dukto
+brew cask install --appdir="/Applications" dropbox
+brew cask install --appdir="/Applications" f-lux
+brew cask install --appdir="/Applications" firefox
+brew cask install --appdir="/Applications" flash
+brew cask install --appdir="/Applications" gas-mask
+brew cask install --appdir="/Applications" google-chrome
+brew cask install --appdir="/Applications" google-drive
+brew cask install --appdir="/Applications" hex-fiend
+brew cask install --appdir="/Applications" hipchat
+brew cask install --appdir="/Applications" istat-menus
+brew cask install --appdir="/Applications" iterm2
+brew cask install --appdir="/Applications" little-snitch
+brew cask install --appdir="/Applications" multidoge
+brew cask install --appdir="/Applications" mysql-workbench
+brew cask install --appdir="/Applications" node
+brew cask install --appdir="/Applications" sequel-pro
+brew cask install --appdir="/Applications" silverlight
+brew cask install --appdir="/Applications" skype
+brew cask install --appdir="/Applications" spotifree
+brew cask install --appdir="/Applications" spotify
+brew cask install --appdir="/Applications" sqlitebrowser
+brew cask install --appdir="/Applications" sublime-text3
+brew cask install --appdir="/Applications" testflight
+brew cask install --appdir="/Applications" the-unarchiver
+brew cask install --appdir="/Applications" utorrent
+brew cask install --appdir="/Applications" vagrant
+brew cask install --appdir="/Applications" virtualbox
+brew cask install --appdir="/Applications" vlc
+brew cask install --appdir="/Applications" wireshark
+brew cask install --appdir="/Applications" witch
+brew cask install --appdir="/Applications" xquartz
+brew cask install --appdir="/Applications" ynab
 
 
 #custom quicklooks
-brew cask install qlcolorcode
-brew cask install qlstephen
-brew cask install qlmarkdown
-brew cask install quicklook-json
-brew cask install qlprettypatch
-brew cask install quicklook-csv
-brew cask install betterzipql
-brew cask install webp-quicklook
-brew cask install suspicious-package
+brew cask install --appdir="/Applications" betterzipql
+brew cask install --appdir="/Applications" ipaql
+brew cask install --appdir="/Applications" qlcolorcode
+brew cask install --appdir="/Applications" qlstephen
+brew cask install --appdir="/Applications" qlmarkdown
+brew cask install --appdir="/Applications" quicklook-json
+brew cask install --appdir="/Applications" qlprettypatch
+brew cask install --appdir="/Applications" quicklook-csv
+brew cask install --appdir="/Applications" webp-quicklook
+brew cask install --appdir="/Applications" suspicious-package
 
-
-#allow brew cask apps to be found via alfred
-brew cask alfred link
 
 #link sublime for global 'sublime' command
-ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /usr/local/bin/sublime
+ln -s /opt/homebrew-cask/Caskroom/sublime-text3/Build 3059/Sublime Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
 
 #install capistrano
 gem sources -a http://gems.github.com/
