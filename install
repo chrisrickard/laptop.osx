@@ -39,7 +39,7 @@ apps=(
   disk-inventory-x
   dropbox
   dukto
-  f-lux
+  flux
   firefox
   flash
   gas-mask
