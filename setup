@@ -271,6 +271,9 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 # the Dock to launch apps.
 defaults write com.apple.dock persistent-apps -array
 
+# Set dock to left
+defaults write com.apple.dock orientation -string left
+
 
 # Set the icon size of Dock items to 36 pixels
 defaults write com.apple.dock tilesize -int 36
