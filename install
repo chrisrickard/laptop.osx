@@ -11,7 +11,8 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 #configure homebrew
 brew update
 brew upgrade
-brew tap homebrew/versions
+#brew tap homebrew/versions
+brew tap caskroom/versions
 brew tap phinze/homebrew-cask
 
 
@@ -37,6 +38,7 @@ apps=(
   cord
   cyberduck
   disk-inventory-x
+  divvy
   dropbox
   dukto
   flux
@@ -125,6 +127,9 @@ gem sources -a http://gems.github.com/
 
 #note - sticking to capistrano v2 for now...
 sudo gem install capistrano -v "=2.15.5"
+
+#install cocoapods
+sudo gem install cocoapods
 
 #install vagrant-cachier (to speed up provisioning)
 vagrant plugin install vagrant-cachier

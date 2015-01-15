@@ -15,3 +15,12 @@ restore with:
 
 - `brew install mackup`
 - `mackup restore`
+
+
+
+** Other **
+
+Still need to manually configure:
+
+- Fish (http://kidsreturn.org/2012/06/osx-iterm2-fish-glory/)
+- Import LittleSnitch data

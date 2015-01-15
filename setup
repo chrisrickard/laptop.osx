@@ -44,6 +44,8 @@ defaults write com.apple.systemuiserver menuExtras -array \
       "/System/Library/CoreServices/Menu Extras/Battery.menu"
 
 
+# Enable Dark mode switching via keyboard (Ctrl+Opt+Command+T)
+sudo defaults write /Library/Preferences/.GlobalPreferences.plist _HIEnableThemeSwitchHotKey -bool true
 
 # Menu bar: disable transparency
 defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
@@ -83,7 +85,7 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo Hos
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
 # Disable Notification Center and remove the menu bar icon
-launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
+# launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
 
 # Disable smart quotes as they’re annoying when typing code
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
@@ -451,7 +453,7 @@ defaults write com.apple.messageshelper.MessageController SOInputLineSettings -d
 
 
 ###############################################################################
-# Mac App Store                                                               #
+# Mac App Store & Apps                                                              #
 ###############################################################################
 
 # Enable the WebKit Developer Tools in the Mac App Store
@@ -460,8 +462,8 @@ defaults write com.apple.appstore WebKitDeveloperExtras -bool true
 # Enable Debug Menu in the Mac App Store
 defaults write com.apple.appstore ShowDebugMenu -bool true
 
-
-
+#Enable unsigned apps to be installed
+sudo spctl --master-disable
 
 
 
