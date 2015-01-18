@@ -18,11 +18,14 @@ brew tap phinze/homebrew-cask
 
 #install cli apps
 binaries=(
+  android-sdk
   coreutils
   fish
   git
   mackup
+  openssl
   vim
+  wget
 )
 
 echo "installing binaries..."
@@ -38,6 +41,7 @@ apps=(
   cord
   cyberduck
   disk-inventory-x
+  diffmerge
   divvy
   dropbox
   dukto
@@ -60,6 +64,7 @@ apps=(
   skype
   spotifree
   spotify
+  slack
   sqlitebrowser
   sublime-text3
   testflight
