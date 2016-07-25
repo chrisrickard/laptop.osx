@@ -36,10 +36,12 @@ brew install ${binaries[@]}
 
 #install gui apps (with cask)
 apps=(
-  airfoil
+  atom
   bartender
   calibre
+  caffeine
   cord
+  colorpicker 
   cyberduck
   disk-inventory-x
   diffmerge
@@ -49,17 +51,13 @@ apps=(
   flux
   firefox
   flash
-  gas-mask
   google-chrome
   google-drive
+  gimp
   hex-fiend
-  hipchat
   istat-menus
   iterm2
   java7
-  little-snitch
-  multidoge
-  mysqlworkbench
   node
   sequel-pro
   silverlight
