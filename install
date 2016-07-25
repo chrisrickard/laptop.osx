@@ -67,7 +67,6 @@ apps=(
   slack
   sqlitebrowser
   sublime-text3
-  testflight
   the-unarchiver
   utorrent
   vagrant
