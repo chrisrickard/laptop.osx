@@ -42,17 +42,8 @@ brew install ${binaries[@]}
 # install gui apps (with cask)
 echo "installing gui apps..."
 apps=(
-<<<<<<< HEAD
   calibre
   colorpicker
-=======
-  atom
-  bartender
-  calibre
-  caffeine
-  cord
-  colorpicker 
->>>>>>> 8795bf7e719c57c516edd1d5da035199eff74fdd
   cyberduck
   datagrip
   disk-inventory-x
@@ -64,7 +55,6 @@ apps=(
   dukto
   firefox
   flash
-<<<<<<< HEAD
   gimp
   google-chrome
   google-drive-file-stream
@@ -73,16 +63,6 @@ apps=(
   istat-menus
   iterm2
   postman
-=======
-  google-chrome
-  google-drive
-  gimp
-  hex-fiend
-  istat-menus
-  iterm2
-  java7
-  node
->>>>>>> 8795bf7e719c57c516edd1d5da035199eff74fdd
   sequel-pro
   shimo
   silverlight
@@ -90,11 +70,7 @@ apps=(
   spotify
   slack
   sqlitebrowser
-<<<<<<< HEAD
   sublime-text3
-=======
-  sublime-text
->>>>>>> 8795bf7e719c57c516edd1d5da035199eff74fdd
   the-unarchiver
   utorrent
   vagrant
@@ -166,13 +142,8 @@ sudo gem install capistrano -v "=2.15.5"
 # install cocoapods
 sudo gem install cocoapods
 
-<<<<<<< HEAD
-#install vagrant plugins
+# install vagrant plugins
 vagrant plugin install vagrant-bindfs
 vagrant plugin install vagrant-cachier
 vagrant plugin install vagrant-gatling-rsync
 vagrant plugin install vagrant-hostsupdater
-=======
-#install vagrant-cachier (to speed up provisioning)
-vagrant plugin install vagrant-cachier
->>>>>>> 8795bf7e719c57c516edd1d5da035199eff74fdd
