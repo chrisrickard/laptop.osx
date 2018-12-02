@@ -20,17 +20,16 @@ brew tap caskroom/fonts
 # install brew cli apps
 echo "installing cli apps..."
 binaries=(
-  ant
   coreutils
   curl
+  docker
+  docker-machine
   fish
   git
-  java
   mackup
   mas
   nvm
   openssl
-  vagrant
   vim
   wget
   yarn
@@ -50,8 +49,6 @@ apps=(
   disk-inventory-x
   diffmerge
   divvy
-  docker
-  docker-machine
   dropbox
   dukto
   firefox
@@ -62,16 +59,16 @@ apps=(
   hex-fiend
   istat-menus
   iterm2
+  java
   postman
   sequel-pro
   shimo
   skype
   spotify
   slack
-  sqlitebrowser
-  sublime-text3
+  db-browser-for-sqlite
+  sublime-text
   the-unarchiver
-  utorrent
   vagrant
   virtualbox
   visual-studio-code
@@ -133,6 +130,9 @@ nvm use node
 export NVM_DIR="$HOME/.nvm"
 . "$(brew --prefix nvm)/nvm.sh"
 
+# set fish as default shell
+sudo sh -c 'echo /usr/local/bin/fish >> /etc/shells'
+chsh -s /usr/local/bin/fish
 
 # install capistrano 2.15.5 for legacy deployments
 gem sources -a http://gems.github.com/
