@@ -3,77 +3,79 @@
 sudo -v # ask for password only at the beginning
 
 
-#install
+# install brew
 echo "installing homebrew..."
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-
-#configure homebrew
+# configure homebrew
 brew update
 brew upgrade
-#brew tap homebrew/versions
 brew tap caskroom/versions
 brew tap phinze/homebrew-cask
+brew tap mas-cli/tap
+brew tap-pin mas-cli/tap
+brew tap caskroom/fonts
 
 
-#install cli apps
+# install brew cli apps
+echo "installing cli apps..."
 binaries=(
   android-sdk
   ant
   coreutils
   fish
   git
+  java
   mackup
+  mas
+  nvm
   openssl
+  vagrant
   vim
   wget
+  yarn
 )
 
-echo "installing binaries..."
 brew install ${binaries[@]}
 
 
-
-#install gui apps (with cask)
+# install gui apps (with cask)
+echo "installing gui apps..."
 apps=(
-  airfoil
-  bartender
   calibre
-  cord
+  colorpicker
   cyberduck
+  datagrip
   disk-inventory-x
   diffmerge
   divvy
+  docker
+  docker-machine
   dropbox
   dukto
-  flux
   firefox
   flash
-  gas-mask
+  gimp
   google-chrome
-  google-drive
+  google-drive-file-stream
+  harvest
   hex-fiend
-  hipchat
   istat-menus
   iterm2
-  java7
-  little-snitch
-  multidoge
-  mysqlworkbench
-  node
+  postman
   sequel-pro
+  shimo
   silverlight
   skype
-  spotifree
   spotify
   slack
   sqlitebrowser
   sublime-text3
-  testflight
   the-unarchiver
   utorrent
   vagrant
   virtualbox
+  visual-studio-code
   vlc
   wireshark
   witch
@@ -81,11 +83,18 @@ apps=(
   ynab
 )
 
-echo "installing gui apps..."
 brew cask install --appdir="/Applications" ${apps[@]}
 
 
-#custom quicklooks
+# install mas (mac appstore) apps
+echo "installing mac appstore apps..."
+masapps=(
+  1295203466 #Microsoft Remote Desktop 10 (10.2.3)
+)
+mas install ${masapps[@]}
+
+# install custom quicklooks
+echo "installing custom quicklooks..."
 quicklooks=(
   betterzipql
   ipaql
@@ -99,44 +108,42 @@ quicklooks=(
   webp-quicklook
 )
 
-echo "installing custom quicklooks..."
-brew cask install --appdir="/Applications" ${quicklooks[@]}
+mas install ${quicklooks[@]}
 
 
-#fonts
-#The font recipes are prefixed by font-*, so if you want to download Roboto, try searching for font-roboto:
-
-brew tap caskroom/fonts
-
+# install fonts
+echo "installing fonts..."
 fonts=(
   font-geo-sans-light
   font-source-code-pro
   font-roboto
+  brew cask install font-fira-code
 )
 
-# install fonts
-echo "installing fonts..."
 brew cask install ${fonts[@]}
 
 
-
-
-
-#cleanup
+# cleanup
 brew cleanup
 
+# install the latest LTS of node
+nvm install --lts
+nvm use node
 
-#link sublime for global 'sublime' command
-ln -s /opt/homebrew-cask/Caskroom/sublime-text3/Build 3059/Sublime Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
+# allow NVM in every shell session
+export NVM_DIR="$HOME/.nvm"
+. "$(brew --prefix nvm)/nvm.sh"
 
-#install capistrano
+
+# install capistrano 2.15.5 for legacy deployments
 gem sources -a http://gems.github.com/
-
-#note - sticking to capistrano v2 for now...
 sudo gem install capistrano -v "=2.15.5"
 
-#install cocoapods
+# install cocoapods
 sudo gem install cocoapods
 
-#install vagrant-cachier (to speed up provisioning)
+#install vagrant plugins
+vagrant plugin install vagrant-bindfs
 vagrant plugin install vagrant-cachier
+vagrant plugin install vagrant-gatling-rsync
+vagrant plugin install vagrant-hostsupdater
