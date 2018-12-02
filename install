@@ -84,11 +84,9 @@ brew cask install --appdir="/Applications" ${apps[@]}
 
 # install mas (mac appstore) apps
 echo "installing mac appstore apps..."
-masapps=(
-  1295203466 #Microsoft Remote Desktop 10 (10.2.3)
-  497799835 #XCode
-)
-mas install ${masapps[@]}
+mas install 1295203466  # Microsoft Remote Desktop 10 (10.2.3)
+mas install 497799835   # XCode
+
 
 # install custom quicklooks
 echo "installing custom quicklooks..."
@@ -137,9 +135,6 @@ chsh -s /usr/local/bin/fish
 # install capistrano 2.15.5 for legacy deployments
 gem sources -a http://gems.github.com/
 sudo gem install capistrano -v "=2.15.5"
-
-# install cocoapods
-sudo gem install cocoapods
 
 # install vagrant plugins
 vagrant plugin install vagrant-bindfs
