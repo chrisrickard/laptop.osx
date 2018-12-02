@@ -23,6 +23,7 @@ binaries=(
   android-sdk
   ant
   coreutils
+  curl
   fish
   git
   java
@@ -54,7 +55,6 @@ apps=(
   dropbox
   dukto
   firefox
-  flash
   gimp
   google-chrome
   google-drive-file-stream
@@ -65,7 +65,6 @@ apps=(
   postman
   sequel-pro
   shimo
-  silverlight
   skype
   spotify
   slack
@@ -90,6 +89,7 @@ brew cask install --appdir="/Applications" ${apps[@]}
 echo "installing mac appstore apps..."
 masapps=(
   1295203466 #Microsoft Remote Desktop 10 (10.2.3)
+  497799835 #XCode
 )
 mas install ${masapps[@]}
 
